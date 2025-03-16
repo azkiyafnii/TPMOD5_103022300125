@@ -1,0 +1,21 @@
+using System;
+
+public class HaloGeneric<T>
+{
+    public void SapaUser(T nama)
+    {
+        Console.WriteLine($"Halo user {nama}");
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.Write("Masukkan nama Anda: ");
+        string namaInput = Console.ReadLine(); // Ambil input dari user
+
+        HaloGeneric<string> halo = new HaloGeneric<string>();
+        halo.SapaUser(namaInput);
+    }
+}
